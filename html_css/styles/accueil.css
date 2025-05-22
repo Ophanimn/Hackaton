@@ -1,10 +1,112 @@
-.titredelapage{
-  font-family: Moutain Of Christmas;
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../thumbnails/background.jpg"); /* Remplace par ton image */
+    background-size: cover;        /* L'image couvre tout l'écran */
+    background-repeat: no-repeat;  /* Ne se répète pas */
+    background-position: center;   /* Centrée */
+    font-family: Arial, sans-serif;
+    color: white;                  /* Texte blanc pour bonne lisibilité */
+  }
+
+  .top-bar{
+    padding:  5px 5px 5px 5px;
+    display: flex;
+    align-items: end;
+    color: white;
+    font-family: "Mountains Of Christmas";
+    background-color: rgb(34, 21, 21)
+  }
 
 
-}
+  .deuxieme-header {
+    display: flex;
+    background-color: rgb(44, 14, 14);
+    align-items: center;
+    padding-left:  5px;
+    color: white;
+    font-family: "Mountains Of Christmas";
+    background-image: none;
+    justify-content: space-between;
 
-.a{
-  font-family: Mountains of Christmas;
+  }
 
-}
+  .logo {
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+
+  .logo img {
+    height: 60px;
+    margin-right: 10px;
+  }
+
+  .menu {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 15px; /* espace entre les liens */
+    padding: 10px;
+    border-radius: 5px;
+    margin-right:10px;
+  }
+
+  .menu a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+  }
+
+  .menu button {
+    padding: 5px 10px;
+  }
+
+
+
+  .entete_boutons-bouton{
+    padding:  7px 7px 7px 7px;
+    display: inline-block;
+    align-items: end;
+    justify-content: space-between;
+    color: white;
+    font-family: "Mountains Of Christmas";
+
+  }
+
+
+  .logo-retour-accueil{
+    margin-left: 200px;
+    display: inline-block;
+    vertical-align: middle;
+    height: 55px; 
+    margin-right: 5px;
+  }
+
+  .logo-retour-accueil:hover{
+    cursor:pointer;
+  }
+
+  .pere_noel_inc{
+    font-size: 26px;
+    margin: 0px;
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  .pere_noel_inc:hover{
+    cursor:pointer;
+  }
+
+
+  main{
+
+    display: inline-block;
+
+    background-color: aqua;
+  }
+
+  .maine{
+    justify-content:  ;
+  }
