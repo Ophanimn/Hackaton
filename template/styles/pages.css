@@ -1,0 +1,234 @@
+/* styles/pages.css - Spécifique aux pages internes */
+
+body {
+  background-color: #fff;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding-top: 80px;
+}
+
+main {
+  padding: 30px;
+  color: #333;
+}
+
+h1, h2 {
+  font-family: 'Mountains Of Christmas', cursive;
+  color: #b30000;
+}
+
+button {
+  background-color: #e23b3b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #c02d2d;
+}
+
+input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fafafa;
+  color: #333;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f44336;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+section {
+}
+
+
+.formulaire {
+  display: none; /* Cachée par défaut */
+  position: fixed;
+  z-index: 1001;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.formulaire-content {
+  background-color: white;
+  color: black;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.formulaire-content label {
+  display: block;
+  margin-top: 10px;
+}
+
+.formulaire-content input,
+.formulaire-content select {
+  width: 100%;
+  padding: 6px;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+
+.formulaire-fermer {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.form-delete-line {
+  display: none; /* Cachée par défaut */
+  position: fixed;
+  z-index: 1001;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.delete-line-content {
+  background-color: white;
+  color: black;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.delete-line-content label {
+  display: block;
+  margin-top: 10px;
+}
+
+.delete-line-content input,
+.delete-line-content select {
+  width: 100%;
+  padding: 6px;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+
+.delte-line-fermer {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form-ajout-atelier-submit-button{
+  margin-top: 10px;
+}
+
+
+.contact-button {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.contact-button-content {
+  background-color: white;
+  color: #333;
+  margin: 10% auto;
+  padding: 20px;
+  width: 320px;
+  border-radius: 10px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+}
+
+.contact-button-content h2 {
+  font-family: "Mountains Of Christmas";
+  color: #b30000;
+}
+
+.contact-button-fermer {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.contact-button-content {
+  animation: popupFade 0.4s ease-out;
+}
+
+@keyframes popupFade {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.lutins-ateliers-titre{
+  text-align: center;
+}
+
+.main-lutins-ateliers{
+  display: flex;
+  gap: 40px;
+}
+
+.section-lutins{
+  width: 50%;
+  vertical-align: middle;
+}
+
+.section-ateliers{
+  width: 50%;
+  vertical-align: middle;
+}
+
+.submit-button-planner-section{
+  margin-top: 10px; 
+}
+
+

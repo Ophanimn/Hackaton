@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Livraisons</title>
+  <link class="logo" rel="icon" type="image/x-icon" href="./template/thumbnails/logo.png">
+  <link rel="stylesheet" href="./template/styles/pages.css">
+  <link rel="stylesheet" href="./template/styles/index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<script>
+
+function open_contact_section(){
+    document.getElementById('bouton-section').style.display = 'block';
+  }
+
+  function close_contact_section(){
+    document.getElementById('bouton-section').style.display = 'none';
+  }
+
+
+function OpenPlanAdder(){
+  document.getElementById('planner-section').style.display = 'block';
+
+}
+
+function ClosePlanAdder(){
+  document.getElementById('planner-section').style.display = 'none';
+
+}
+
+
+function OuvrirDeleteLine(){
+    document.getElementById('delete-line').style.display = 'block'
+  }
+
+  function FermerDeleteLine(){
+    document.getElementById('delete-line').style.display = 'none'
+  }
+
+window.onclick = function(event){
+    const contactModal = document.getElementById('bouton-section');
+    const planAdder = document.getElementById('planner-section')
+    const form_deleteline = document.getElementById('delete-line');
+    if (event.target === contactModal) {
+      close_contact_section();
+    }
+
+    if(event.target === planAdder){
+      ClosePlanAdder();
+    }
+
+    if(event.target == form_deleteline){
+      FermerDeleteLine()
+    }
+  }
+
+
+
+
+
+
+</script>
+
+<body>
+  <header class="header">
+    <div class="back-to-homepage">
+      <a href="index.php?page=1">
+        <img class="icon-accueil" src="./template/thumbnails/logo.png">
+        <span class="corp-name">Père Noël Inc.</span>
+      </a>
+    </div>
+   
+    <nav class="menu">  
+      <div>
+        <a href="index.php?page=1">Accueil</a>
+      </div>
+      <div>
+        <a href="index.php?page=2">Lettres Reçues</a>
+      </div>
+      <div>
+        <a href="index.php?page=3">Lutins & Ateliers</a>
+      </div>
+      <div>
+        <a href="index.php?page=4">Livraisons</a>
+      </div>
+      <div>
+        <a class="menu-cadeaux" href="index.php?page=5">Gestion des Cadeaux</a>
+      </div>
+      <button class="menu-button" onclick="open_contact_section()">Contact</button>
+    </nav>
+  </header>
+  <div id="bouton-section" class="contact-button">
+    <div class="contact-button-content">
+      <span class="contact-button-fermer" onclick="close_contact_section()">&times;</span>
+      <h2>Contact</h2>
+      <p>📞 04 22 52 10 10</p>
+      <p>✉️ lettres@perenoel.com</p>
+      <p>📍 8 chemin de l'Avenue Glacée, 56000, Pôle Nord</p>
+      <p>M. Santa Claus</p>
+    </div>
+  </div>
+  <main style="padding: 30px; color: black;">
+    <h1>Suivi des Livraisons</h1>
+    <button onclick="OpenPlanAdder()">Planifier une livraison</button>
+              <div id="planner-section" class="formulaire">
+                <div class="formulaire-content">
+                  <span class="formulaire-fermer" onclick="ClosePlanAdder()">&times;</span>
+                  <h2>Planifier une Livraison</h2>
+                  <form>
+                    <label for="date">Date</label>
+                    <input type="date" id="date" name="date" required><br>
+                    <label for="state">État :</label>
+                    <input type="state" id="state" name="state" required><br>
+                    <label for="lutin-attribution">Lutin Concerné :</label>
+                    <select id="lutin-attribution" name="lutin-attribution">
+                      <option value="cadeau1">Lutin1</option>
+                      <option value="cadeau2">Lutin2</option>
+                      <option value="cadeau3">Lutin3</option>
+                      <option value="cadeau4">Lutin4</option>
+                    </select><br>
+                    <label for="cadeaux-a-livrer">Cadeau(x) à Livrer :</label>
+                    <select id="cadeaux-a-livrer" name="cadeaux-a-livrer">
+                      <option value="cadeau1">Ordinateur</option>
+                      <option value="cadeau2">Voiture</option>
+                      <option value="cadeau3">Souris</option>
+                      <option value="cadeau4">Louis</option>
+                    </select><br>
+                    <button class="submit-button-planner-section" type="submit">Valider</button>
+                  </form>
+                </div>
+              </div>
+
+
+
+    <table border="1" cellspacing="0" cellpadding="10">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Date</th>
+          <th>État</th>
+          <th>Lutin</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          {{LIVRAISON}}
+          <td><button>Détails</button> <button>Modifier</button> 
+            <button onclick="OuvrirDeleteLine()">Supprimer</button>
+                <div id="delete-line" class="form-delete-line">
+                  <div class="delete-line-content">
+                    <span class="delete-line-fermer" onclick="FermerDeleteLine()">&times;</span>
+                    <h2>Voulez-vous vraiment supprimer cette ligne ?</h2>
+                    <form>
+                      <button type="submit">Valider</button>
+                      <button type="submit">Annuler</button>
+                    </form>
+                  </div>
+                </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer class="footer-contact">
+    <text class="footer-tel">📞 04 22 52 10 10</a>
+    <text class="footer-mail">✉️ lettres@perenoel.com</a>
+    <text class="footer-adress"> 8 chemin de L'Avenue Glacée, 56000, Pôle Nord</a>
+    <text class="footer-name">M. Santa Claus</a>
+  </footer>
+</body>
+</html>
