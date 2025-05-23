@@ -28,7 +28,7 @@
 
 		public function page1()
         {
-            $vue = new Template('template/index.html');
+            $vue = new Template('./template/index.html');
 
 			echo $vue -> getSortie();
         }
@@ -45,7 +45,7 @@
         		$contenu .= '<td><button>Voir</button> <button>Supprimer</button></td>';
     		}
 			
-			$template = file_get_contents('template/lettres.html');
+			$template = file_get_contents('./template/lettres.html');
 
     		// On remplace le placeholder par le contenu HTML généré
    		 	$html = str_replace('{{LETTRES}}', $contenu, $template);
@@ -75,7 +75,7 @@
         		$contenu2 .= '<td>' . htmlspecialchars($lutin->adresse) . '</td>';
     		}
 
-			$template = file_get_contents('template/lettres.html');
+			$template = file_get_contents('./template/lettres.html');
 
     		// On remplace le placeholder par le contenu HTML généré
    		 	$html = str_replace('{{ATELIER}}', $contenu1, $template);
@@ -97,7 +97,7 @@
         		$contenu .= '<td>' . htmlspecialchars($livraison->lutins) . '</td>';
     		}
 			
-			$template = file_get_contents('template/livraison.html');
+			$template = file_get_contents('./template/livraison.html');
 
     		// On remplace le placeholder par le contenu HTML généré
    		 	$html = str_replace('{{LIVRAISON}}', $contenu, $template);
@@ -117,7 +117,7 @@
         		$contenu .= '<td><button>Voir</button> <button>Supprimer</button></td>';
     		}
 			
-			$template = file_get_contents('template/cadeaux.html');
+			$template = file_get_contents('./template/cadeaux.html');
 
     		// On remplace le placeholder par le contenu HTML généré
    		 	$html = str_replace('{{CADEAUX}}', $contenu, $template);
