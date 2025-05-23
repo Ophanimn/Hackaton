@@ -49,7 +49,7 @@
 
 		public function page4()
         {
-            $vue = new Template('template/livraison.html');
+            $vue = new Template('template/livraisons.html');
 
 			echo $vue -> getSortie();
         }
