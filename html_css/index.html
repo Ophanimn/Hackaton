@@ -6,15 +6,32 @@
     <title>Père Noël Inc.</title>
     <link class="logo" rel="icon" type="image/x-icon" href="thumbnails/logo.png">
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/pages.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
   
-  
+  <script>
+
+  function open_contact_section(){
+    document.getElementById('bouton-section').style.display = 'block';
+  }
+
+  function close_contact_section(){
+    document.getElementById('bouton-section').style.display = 'none';
+  }
+
+  window.onclick = function(event){
+    const contactModal = document.getElementById('bouton-section');
+
+
+    if (event.target === contactModal) {
+      close_contact_section();
+    }
+  }
   </script>
-
-
 
   <body>
 
@@ -43,11 +60,22 @@
         <div>
           <a class="menu-cadeaux" href="cadeaux.html">Gestion des Cadeaux</a>
         </div>
-        <button class="menu-button">Contact</button>
+        <button class="menu-button" onclick="open_contact_section()">Contact</button>
+            
       </nav>
 
     </header>
-
+    <!-- MODALE DE CONTACT -->
+    <div id="bouton-section" class="contact-button">
+      <div class="contact-button-content">
+        <span class="contact-button-fermer" onclick="close_contact_section()">&times;</span>
+        <h2>Contact</h2>
+        <p>📞 04 22 52 10 10</p>
+        <p>✉️ lettres@perenoel.com</p>
+        <p>📍 8 chemin de l'Avenue Glacée, 56000, Pôle Nord</p>
+        <p>M. Santa Claus</p>
+      </div>
+    </div>
     <section class="news">
       <div class="news-arrows">
         <div class="arrow left">&#10094;</div>
@@ -58,6 +86,7 @@
           <h3 class="countdown-title">
             Compte à Rebours avant Noël :
           </h3>
+          <div class="countdown">
             <div class="countdown-days">
               <span>
                 215
@@ -68,12 +97,14 @@
             </div>
             <div class="countdown-hours">
               <span>
-                7
+                ; 7
               </span>
               <span class="countdown-hours-word">
                 heures
               </span>
             </div>
+          </div>
+            
             
             
             

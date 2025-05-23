@@ -10,10 +10,34 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
+<script>
+
+function open_contact_section(){
+    document.getElementById('bouton-section').style.display = 'block';
+  }
+
+  function close_contact_section(){
+    document.getElementById('bouton-section').style.display = 'none';
+  }
+
+  window.onclick = function(event){
+    const contactModal = document.getElementById('bouton-section');
+
+
+    if (event.target === contactModal) {
+      close_contact_section();
+    }
+  }
+
+
+
+
+
+</script>
 <body>
   <header class="header">
     <div class="back-to-homepage">
-      <a href="acceuil.html">
+      <a href="index.html">
         <img class="icon-accueil" src="thumbnails/logo.png">
         <span class="corp-name">Père Noël Inc.</span>
       </a>
@@ -35,9 +59,19 @@
       <div>
         <a class="menu-cadeaux" href="cadeaux.html">Gestion des Cadeaux</a>
       </div>
-      <button class="menu-button">Contact</button>
+      <button class="menu-button" onclick="open_contact_section()">Contact</button>
     </nav>
   </header>
+  <div id="bouton-section" class="contact-button">
+    <div class="contact-button-content">
+      <span class="contact-button-fermer" onclick="close_contact_section()">&times;</span>
+      <h2>Contact</h2>
+      <p>📞 04 22 52 10 10</p>
+      <p>✉️ lettres@perenoel.com</p>
+      <p>📍 8 chemin de l'Avenue Glacée, 56000, Pôle Nord</p>
+      <p>M. Santa Claus</p>
+    </div>
+  </div>
   <main style="padding: 30px; color: black;">
     <h1>Gestion des Cadeaux</h1>
     <button>Ajouter un cadeau</button>
@@ -45,7 +79,6 @@
       <thead>
         <tr>
           <th>Nom</th>
-          <th>Description</th>
           <th>Stock</th>
           <th>Refill</th>
           <th>Actions</th>
@@ -54,7 +87,6 @@
       <tbody>
         <tr>
           <td>Voiture magique</td>
-          <td>Petite voiture télécommandée</td>
           <td>12</td>
           <td></td>
           <td><button>Modifier</button> <button>Supprimer</button></td>
@@ -62,5 +94,13 @@
       </tbody>
     </table>
   </main>
+
+  <footer class="footer-contact">
+    <text class="footer-tel">📞 04 22 52 10 10</a>
+    <text class="footer-mail">✉️ lettres@perenoel.com</a>
+    <text class="footer-adress"> 8 chemin de L'Avenue Glacée, 56000, Pôle Nord</a>
+    <text class="footer-name">M. Santa Claus</a>
+  </footer>
+
 </body>
 </html>

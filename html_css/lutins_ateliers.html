@@ -4,13 +4,11 @@
   <meta charset="UTF-8">
   <title>Lutins & Ateliers</title>
   <link class="logo" rel="icon" type="image/x-icon" href="thumbnails/logo.png">
-
   <link rel="stylesheet" href="styles/pages.css">
   <link rel="stylesheet" href="styles/index.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <script>
@@ -26,6 +24,60 @@
     const modal = document.getElementById('formulaire-ajout');
     if (event.target == modal) {
       fermerModal();
+    }
+  }
+
+
+  function OuvrirDeleteLine(){
+    document.getElementById('delete-line').style.display = 'block'
+  }
+
+  function FermerDeleteLine(){
+    document.getElementById('delete-line').style.display = 'none'
+  }
+
+  window.onclick = function(event){
+    const form_deleteline = document.getElementById('delete-line');
+    if(event.target == form_deleteline){
+      FermerDeleteLine()
+    }
+  }
+
+  function OuvrirAjoutAtelier(){
+    document.getElementById('form-ajout-atelier').style.display ='block'
+  }
+
+  function FermerAjoutAtelier(){
+    document.getElementById('form-ajout-atelier').style.display ='none'
+  }
+
+  window.onclick = function(event){
+    const form_ajout_atelier = document.getElementById('form-ajout-atelier');
+    if(event.target == form_ajout_atelier){
+      FermerDeleteLine()
+    }
+    
+  }
+
+
+  function delete_line_action(){
+
+  }
+
+  function open_contact_section(){
+    document.getElementById('bouton-section').style.display = 'block';
+  }
+
+  function close_contact_section(){
+    document.getElementById('bouton-section').style.display = 'none';
+  }
+
+  window.onclick = function(event){
+    const contactModal = document.getElementById('bouton-section');
+
+
+    if (event.target === contactModal) {
+      close_contact_section();
     }
   }
 </script>
@@ -55,12 +107,23 @@
       <div>
         <a class="menu-cadeaux" href="cadeaux.html">Gestion des Cadeaux</a>
       </div>
-      <button class="menu-button">Contact</button>
+      <button class="menu-button" onclick="open_contact_section()">Contact</button>
     </nav>
   </header>
-  <main style="padding: 30px; color: black;">
-    <h1>Lutins & Ateliers</h1>
-    <section>
+  <div id="bouton-section" class="contact-button">
+    <div class="contact-button-content">
+      <span class="contact-button-fermer" onclick="close_contact_section()">&times;</span>
+      <h2>Contact</h2>
+      <p>📞 04 22 52 10 10</p>
+      <p>✉️ lettres@perenoel.com</p>
+      <p>📍 8 chemin de l'Avenue Glacée, 56000, Pôle Nord</p>
+      <p>M. Santa Claus</p>
+    </div>
+  </div>
+  <h1 class="lutins-ateliers-titre">Lutins & Ateliers</h1>
+
+  <main class="main-lutins-ateliers" style="padding: 30px; color: black;">
+    <section class="section-lutins">
       <h2>Lutins</h2>
       <button onclick="ouvrirModal()">Ajouter un lutin</button>
               <div id="formulaire-ajout" class="formulaire">
@@ -77,6 +140,7 @@
                       <option value="fabrication">Fabrication</option>
                       <option value="livraison">Livraison</option>
                       <option value="informaticien">Informaticien</option>
+                      <option value="chef">Chef</option>
                     </select><br>
                     <label for="atelier">Atelier :</label>
                     <input type="text" id="atelier" name="atelier"><br>
@@ -98,14 +162,47 @@
             <td>Tricotin</td>
             <td>fabrication</td>
             <td>Jouets</td>
-            <td><button>Modifier</button> <button>Supprimer</button></td>
+            <td><button>Modifier</button> 
+                <button onclick="OuvrirDeleteLine()">Supprimer</button>
+                <div id="delete-line" class="form-delete-line">
+                  <div class="delete-line-content">
+                    <span class="delete-line-fermer" onclick="FermerDeleteLine()">&times;</span>
+                    <h2>Voulez-vous vraiment supprimer cette ligne ?</h2>
+                    <form>
+                      <button type="submit">Valider</button>
+                      <button type="submit">Annuler</button>
+                    </form>
+                  </div>
+                </div>
+            </td>
           </tr>
         </tbody>
       </table>
     </section>
-    <section>
+    <section class="section-atelier">
       <h2>Ateliers</h2>
-      <button>Ajouter un atelier</button>
+      <button onclick="OuvrirAjoutAtelier()">Ajouter un atelier</button>
+      <div id="form-ajout-atelier" class="formulaire">
+        <div class="formulaire-content">
+          <span class="formulaire-fermer" onclick="FermerAjoutAtelier()">&times;</span>
+          <h2>Ajouter un Atelier</h2>
+          <form>
+            <label for="nom">Nom de l'Atelier :</label>
+            <input type="text" id="nom" name="nom" required><br>
+            <label for="adresse">Adesse de l'Atelier :</label>
+            <input type="text" id="adresse" name="adresse" required><br>
+            <label for="compteur-lutin">Nb de Lutins :</label>
+            <input type="int" id="compteur-lutin" name="compteur-lutin" required><br>
+            <label for="chef-lutin">Chef Lutin :</label>
+            <select id="chef-lutin" name="chef-lutin">
+              <option value="lutin1">Lutin1</option>
+              <option value="lutin2">Lutin2</option>
+              <option value="lutin3">Lutin3</option>
+            </select><br>
+            <button class="form-ajout-atelier-submit-button" type="form-ajout-atelier-submit-button">Valider</button>
+          </form>
+        </div>
+      </div>
       <table border="1" cellspacing="0" cellpadding="10">
         <thead>
           <tr>
@@ -118,14 +215,34 @@
         </thead>
         <tbody>
           <tr>
-            <td>Jouets</td>
-            <td>Pôle Nord</td>
-            <td>2</td> <td></td>
-            <td><button>Modifier</button> <button>Supprimer</button></td>
+            <td>Atelier Jouets</td>
+            <td>12 rue de la pente de neige, 56000, Pôle Nord</td>
+            <td>2</td> 
+            <td></td>
+            <td><button>Modifier</button> 
+                <button onclick="OuvrirDeleteLine()">Supprimer</button>
+                <div id="delete-line" class="form-delete-line">
+                  <div class="delete-line-content">
+                    <span class="delete-line-fermer" onclick="FermerDeleteLine()">&times;</span>
+                    <h2>Voulez-vous vraiment supprimer cette ligne ?</h2>
+                    <form>
+                      <button onclick="delete_line_action()" type="submit">Valider</button>
+                      <button type="submit">Annuler</button>
+                    </form>
+                  </div>
+                </div>
+            </td>
           </tr>
         </tbody>
       </table>
     </section>
   </main>
+
+  <footer class="footer-contact">
+    <text class="footer-tel">📞 04 22 52 10 10</a>
+    <text class="footer-mail">✉️ lettres@perenoel.com</a>
+    <text class="footer-adress"> 8 chemin de L'Avenue Glacée, 56000, Pôle Nord</a>
+    <text class="footer-name">M. Santa Claus</a>
+  </footer>
 </body>
 </html>
