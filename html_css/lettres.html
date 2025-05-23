@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Lettres Reçues</title>
+  <link class="logo" rel="icon" type="image/x-icon" href="thumbnails/logo.png">
+
+  <link rel="stylesheet" href="styles/pages.css">
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="back-to-homepage">
+      <a href="index.html">
+        <img class="icon-accueil" src="thumbnails/logo.png">
+        <span class="corp-name">Père Noël Inc.</span>
+      </a>
+      
+    </div>
+    <nav class="menu">
+      <div>
+        <a href="index.html">Accueil</a>
+      </div>
+      <div>
+        <a href="lettres.html">Lettres Reçues</a>
+      </div>
+      <div>
+        <a href="lutins_ateliers.html">Lutins & Ateliers</a>
+      </div>
+      <div>
+        <a href="livraisons.html">Livraisons</a>
+      </div>
+      <div>
+        <a class="menu-cadeaux" href="cadeaux.html">Gestion des Cadeaux</a>
+      </div>
+      <button class="menu-button">Contact</button>
+    </nav>
+  </header>
+
+  <main style="padding: 30px; color: black;">
+    <h1>Lettres Reçues</h1>
+    <input type="text" placeholder="Rechercher une lettre...">
+    <table border="1" cellspacing="0" cellpadding="10">
+      <thead>
+        <tr>
+          <th>Nom de l'enfant</th>
+          <th>Date de réception</th>
+          <th>Cadeaux demandés</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Léa</td>
+          <td>01/12/2025</td>
+          <td>Poupée, Livre magique</td>
+          <td><button>Voir</button> 
+              <button onclick="ouvrirModal()">Supprimer</button>
+              <div id="formulaire-ajout" class="formulaire">
+                <div class="formulaire-content">
+                  <span class="formulaire-fermer" onclick="fermerModal()">&times;</span>
+                  <h2>Ajouter un lutin</h2>
+                  <form>
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="nom" required><br>
+                    <label for="nom">Prénom :</label>
+                    <input type="text" id="prenom" name="prenom" required><br>
+                    <label for="role">Rôle :</label>
+                    <select id="role" name="role">
+                      <option value="fabrication">Fabrication</option>
+                      <option value="livraison">Livraison</option>
+                      <option value="informaticien">Livraison</option>
+                    </select><br>
+                    <label for="atelier">Atelier :</label>
+                    <input type="text" id="atelier" name="atelier"><br>
+              
+                    <button type="submit">Valider</button>
+                  </form>
+                </div>
+              </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>
