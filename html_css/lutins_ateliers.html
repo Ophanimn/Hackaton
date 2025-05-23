@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Lutins & Ateliers</title>
-  <link rel="stylesheet" href="./template/styles/pages.css">
-  <link rel="stylesheet" href="./template/styles/index.css">
+  <link rel="stylesheet" href="styles/pages.css">
+  <link rel="stylesheet" href="styles/index.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -13,26 +13,27 @@
 <body>
   <header class="header">
     <div class="back-to-homepage">
-      <a href="index.php?page=1">
-        <img class="icon-accueil" src="./template/thumbnails/logo.png">
+      <a href="index.html">
+        <img class="icon-accueil" src="thumbnails/logo.png">
         <span class="corp-name">Père Noël Inc.</span>
       </a>
     </div>
+    
     <nav class="menu">
       <div>
-        <a href="index.php?page=1">Accueil</a>
+        <a href="index.html">Accueil</a>
       </div>
       <div>
-        <a href="index.php?page=2">Lettres Reçues</a>
+        <a href="lettres.html">Lettres Reçues</a>
       </div>
       <div>
-        <a href="index.php?page=3">Lutins & Ateliers</a>
+        <a href="lutins_ateliers.html">Lutins & Ateliers</a>
       </div>
       <div>
-        <a href="index.php?page=4">Livraisons</a>
+        <a href="livraisons.html">Livraisons</a>
       </div>
       <div>
-        <a class="menu-cadeaux" href="index.php?page=5">Gestion des Cadeaux</a>
+        <a class="menu-cadeaux" href="cadeaux.html">Gestion des Cadeaux</a>
       </div>
       <button class="menu-button">Contact</button>
     </nav>
@@ -44,11 +45,21 @@
       <button>Ajouter un lutin</button>
       <table border="1" cellspacing="0" cellpadding="10">
         <thead>
-          <tr><th>Nom</th><th>Spécialité</th><th>Atelier</th><th>Actions</th></tr>
+          <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Fonction</th>
+            <th>Dispo</th>
+          </tr>
         </thead>
         <tbody>
-          {{LUTIN}}
-      </tbody>
+          <tr>
+            <td>Tricotin</td>
+            <td>fabrication</td>
+            <td>Jouets</td>
+            <td><button>Modifier</button> <button>Supprimer</button></td>
+          </tr>
+        </tbody>
       </table>
     </section>
     <section>
@@ -56,11 +67,22 @@
       <button>Ajouter un atelier</button>
       <table border="1" cellspacing="0" cellpadding="10">
         <thead>
-          <tr><th>Nom</th><th>Localisation</th><th>Lutins affectés</th><th>Actions</th></tr>
+          <tr>
+            <th>Nom</th>
+            <th>Adresse</th>
+            <th>Compteur Lutins</th>
+            <th>Liste Lutins</th>
+            <th>Actions</th>
+          </tr>
         </thead>
         <tbody>
-          {{ATELIER}}
-      </tbody>
+          <tr>
+            <td>Jouets</td>
+            <td>Pôle Nord</td>
+            <td>2</td> <td></td>
+            <td><button>Modifier</button> <button>Supprimer</button></td>
+          </tr>
+        </tbody>
       </table>
     </section>
   </main>

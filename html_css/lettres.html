@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Lettres Reçues - Père Noël Inc.</title>
-  <link class="logo" rel="icon" type="image/x-icon" href="./template/thumbnails/logo.png">
-  <link rel="stylesheet" href="./template/styles/pages.css">
-  <link rel="stylesheet" href="./template/styles/index.css">
+  <link rel="stylesheet" href="styles/pages.css">
+  <link rel="stylesheet" href="styles/index.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -13,26 +12,27 @@
 <body>
   <header class="header">
     <div class="back-to-homepage">
-      <a href="index.php?page=1">
-        <img class="icon-accueil" src="./template/thumbnails/logo.png">
+      <a href="index.html">
+        <img class="icon-accueil" src="thumbnails/logo.png">
         <span class="corp-name">Père Noël Inc.</span>
       </a>
+      
     </div>
     <nav class="menu">
       <div>
-        <a href="index.php?page=1">Accueil</a>
+        <a href="index.html">Accueil</a>
       </div>
       <div>
-        <a href="index.php?page=2">Lettres Reçues</a>
+        <a href="lettres.html">Lettres Reçues</a>
       </div>
       <div>
-        <a href="index.php?page=3">Lutins & Ateliers</a>
+        <a href="lutins_ateliers.html">Lutins & Ateliers</a>
       </div>
       <div>
-        <a href="index.php?page=4">Livraisons</a>
+        <a href="livraisons.html">Livraisons</a>
       </div>
       <div>
-        <a class="menu-cadeaux" href="index.php?page=5">Gestion des Cadeaux</a>
+        <a class="menu-cadeaux" href="cadeaux.html">Gestion des Cadeaux</a>
       </div>
       <button class="menu-button">Contact</button>
     </nav>
@@ -42,8 +42,7 @@
     <h1>Lettres Reçues</h1>
     <input type="text" placeholder="Rechercher une lettre...">
     <table border="1" cellspacing="0" cellpadding="10">
-
-        
+      <thead>
         <tr>
           <th>Nom de l'enfant</th>
           <th>Date de réception</th>
@@ -52,7 +51,12 @@
         </tr>
       </thead>
       <tbody>
-          {{LETTRES}}
+        <tr>
+          <td>Léa</td>
+          <td>01/12/2025</td>
+          <td>Poupée, Livre magique</td>
+          <td><button>Voir</button> <button>Supprimer</button></td>
+        </tr>
       </tbody>
     </table>
   </main>
