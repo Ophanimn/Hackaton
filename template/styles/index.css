@@ -94,14 +94,14 @@
     font-weight: bold;
     position: relative;
     color: black;
-    transition-duration: 0.5s;
+    transition: font-size 0.5s;
 
   }
 
   .menu-button:hover{
     background-color: rgba(255, 255, 255, 0.3);
     font-size: 20px;
-    transition-duration: 0.5s;
+    transition: font-size 0.5s;
     box-shadow: 20px, 20px, 10px, rgb(0, 0, 0, 1);
     
   }
@@ -134,8 +134,13 @@
     cursor:pointer;
   }
 
+  .banner-gif img {
+    height: 60px;
+    width: 100px;
+  }
+
   .news{
-    background-image: url("");
+    background-image: url("../thumbnails/background.jpg");
     background-color: rgba(32, 32, 32, 0.6);
     background-size: cover;
     background-position: center;
@@ -152,6 +157,35 @@
     position: relative;
     width: 100%;
     height: 100%;
+  }
+
+  .countdown-title{
+    font-family: "Mountains of Christmas";
+    font-weight: bold;
+    font-size: 30px;
+  }
+
+  .countdown-days{
+    display: inline-block;
+    text-align: center;
+    font-size: 35px;
+    margin-left: 20px;
+  }
+
+  .countdown{
+    justify-content: space-between;
+    
+  }
+
+  .countdown-hours{
+    display: inline-block;
+    text-align: center;
+    font-size: 35px;
+    
+  }
+
+  .countdown-days, .countdown-hours{
+    font-family: "Mountains of Christmas";
   }
   
   .arrow {
@@ -188,7 +222,7 @@
   }
 
   .news-title{
-    font-size: 50px;
+    font-size: 70px;
     font-family: "Mountains of Christmas";
     text-align: center;
   }
@@ -233,3 +267,4 @@
   .footer-name{
     font-style: italic;
   }
+
