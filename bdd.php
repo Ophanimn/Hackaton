@@ -213,22 +213,6 @@ class BDD {
 			}
 		
 			return $livraisons;
-		}
-
-		public function Ajouter()
-		{
-
-		}
-
-		public function Supprimer()
-		{
-			
-		}
-
-		public function Modifier()
-		{
-			
-		}
-		
+		}		
 }
 ?>

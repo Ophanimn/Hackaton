@@ -39,12 +39,10 @@
 			
 			$contenu = '';
     		foreach ($lettres as $lettre) {
-        		$contenu .= '<tr>';
         		$contenu .= '<td>' . htmlspecialchars($lettre->nom) . '</td>';
         		$contenu .= '<td>' . htmlspecialchars($lettre->date_reception) . '</td>';
         		$contenu .= '<td>' . htmlspecialchars($lettre->cadeaux) . '</td>';
         		$contenu .= '<td><button>Voir</button> <button>Supprimer</button></td>';
-        		$contenu .= '</tr>';
     		}
 			
 			$template = file_get_contents('template/lettres.html');
@@ -63,24 +61,18 @@
 			
 			$contenu1 = '';
     		foreach ($ateliers as $atelier) {
-        		$contenu1 .= '<tr>';
         		$contenu1 .= '<td>' . htmlspecialchars($atelier->secteur) . '</td>';
         		$contenu1 .= '<td>' . htmlspecialchars($atelier->adresse) . '</td>';
         		$contenu1 .= '<td>' . htmlspecialchars($atelier->nb_lutins) . '</td>';
-        		$contenu1 .= '<td><button>Voir</button> <button>Supprimer</button></td>';
-        		$contenu1 .= '</tr>';
     		}
 
 			$lutins = $this -> bdd -> getLutin();
 			
 			$contenu2 = '';
     		foreach ($lutins as $lutin) {
-        		$contenu2 .= '<tr>';
         		$contenu2 .= '<td>' . htmlspecialchars($lutin->nom) . '</td>';
         		$contenu2 .= '<td>' . htmlspecialchars($lutin->fonction) . '</td>';
         		$contenu2 .= '<td>' . htmlspecialchars($lutin->adresse) . '</td>';
-        		$contenu2 .= '<td><button>Voir</button> <button>Supprimer</button></td>';
-        		$contenu2 .= '</tr>';
     		}
 
 			$template = file_get_contents('template/lettres.html');
@@ -99,13 +91,10 @@
 			
 			$contenu = '';
     		foreach ($livraisons as $livraison) {
-        		$contenu .= '<tr>';
 				$contenu .= '<td>' . htmlspecialchars($livraison->id_Livraison) . '</td>';
         		$contenu .= '<td>' . htmlspecialchars($livraison->datelivraison) . '</td>';
         		$contenu .= '<td>' . htmlspecialchars($livraison->status) . '</td>';
         		$contenu .= '<td>' . htmlspecialchars($livraison->lutins) . '</td>';
-        		$contenu .= '<td><button>Voir</button> <button>Supprimer</button></td>';
-        		$contenu .= '</tr>';
     		}
 			
 			$template = file_get_contents('template/livraison.html');
@@ -123,11 +112,9 @@
 			
 			$contenu = '';
     		foreach ($cadeaux as $cadeau) {
-        		$contenu .= '<tr>';
 				$contenu .= '<td>' . htmlspecialchars($cadeau->libelle) . '</td>';
         		$contenu .= '<td>' . htmlspecialchars($cadeau->stock) . '</td>';
         		$contenu .= '<td><button>Voir</button> <button>Supprimer</button></td>';
-        		$contenu .= '</tr>';
     		}
 			
 			$template = file_get_contents('template/cadeaux.html');
