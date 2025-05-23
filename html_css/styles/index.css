@@ -1,0 +1,256 @@
+
+  body {
+    margin: 0;
+    padding-top: 80px;
+    background-color: rgb(255, 255, 255);
+    background-size: cover;       
+    background-repeat: no-repeat; 
+    background-position: center;   
+    font-family: Arial, sans-serif;
+    color: white;                  
+  }
+
+  .header {
+    display: flex;
+    background-color: rgb(230, 58, 58);
+    align-items: center;
+    color: white;
+    font-family: "Mountains Of Christmas";
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* pour rester au-dessus du reste */
+
+  }
+
+  .back-to-homepage {
+    display: flex;
+    align-items: center;
+    color: white;
+    width: 400px;
+  }
+
+  .back-to-homepage img {
+    height: 60px;
+    margin-right: 10px;
+  }
+
+  .back-to-homepage a{
+    text-decoration:none;
+
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; 
+    padding: 10px;
+    border-radius: 5px;
+    margin-right:10px;
+  }
+
+  .menu a{
+    text-decoration: none;
+    align-items: end;
+    justify-content: space-between;
+    color: white;
+    font-family: "Mountains Of Christmas";
+    font-weight: bold;
+    margin-right: 15px;
+    margin-left: 15px;
+    transition-duration: 0.5s;
+
+
+  }
+
+  .menu a:hover{
+    transition-duration: 0.5s;
+    font-size: 30px;
+    text-shadow: 10px 10px 20px rgba(0, 0, 0, 1);
+
+  }
+
+  .menu a:active{
+    opacity: 0.6;
+  }
+  
+  .menu-button {
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 50px;
+    background-color: white;
+    border: none;
+    margin-right: 20px;
+    margin-left: 25px;
+    letter-spacing: 0.75px;
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
+    color: black;
+    transition-duration: 0.5s;
+
+  }
+
+  .menu-button:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+    font-size: 20px;
+    transition-duration: 0.5s;
+    box-shadow: 20px, 20px, 10px, rgb(0, 0, 0, 1);
+    
+  }
+
+
+
+
+  .icon-accueil{
+    margin-left: 150px;
+    display: inline-block;
+    vertical-align: middle;
+    height: 55px; 
+    margin-right: 5px;
+  }
+
+  .icon-accueil:hover{
+    cursor:pointer;
+  }
+
+  .corp-name{
+    font-size: 26px;
+    margin: 0px;
+    font-weight: bold;
+    font-style: italic;
+    color:white;
+    vertical-align:middle;
+  }
+
+  .corp-name:hover{
+    cursor:pointer;
+  }
+
+  .banner-gif img {
+    height: 60px;
+    width: 100px;
+  }
+
+  .news{
+    background-image: url("../thumbnails/background.jpg");
+    background-color: rgba(32, 32, 32, 0.6);
+    background-size: cover;
+    background-position: center;
+    height: 620px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-blend-mode:darken;
+
+  }
+
+  .news-arrows {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .countdown-title{
+    font-family: "Mountains of Christmas";
+    font-weight: bold;
+    font-size: 30px;
+  }
+
+  .countdown-hours{
+    display: inline-block;
+    text-align: center;
+    
+  }
+
+  .countdown-days, .countdown-hours{
+    font-family: "Mountains of Christmas";
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    user-select: none;
+    transition: background-color 0.3s;
+  }
+  
+  .arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .arrow.left {
+    left: 1rem;
+  }
+  
+  .arrow.right {
+    right: 1rem;
+  }
+
+  .news-content{
+    text-align: center;
+
+
+  }
+
+  .news-title{
+    font-size: 70px;
+    font-family: "Mountains of Christmas";
+    text-align: center;
+  }
+
+  .news-source{
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .news-video{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .news-video video {
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    
+  }
+
+  .footer-contact{
+    padding:  5px 5px 5px 5px;
+    display:flex;
+    align-items:center;
+    justify-content: end;
+    color: white;
+    font-family: "Mountains Of Christmas";
+    background-color: rgb(233, 34, 34);
+    padding-right: 40px;
+  }
+
+
+  .footer-contact text{
+    margin-left:15px;
+    margin-right: 15px;
+  }
+
+  .footer-name{
+    font-style: italic;
+  }
