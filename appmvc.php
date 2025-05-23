@@ -33,7 +33,7 @@
 			echo $vue -> getSortie();
         }
 
-		public function page2()
+		/*public function page2()
         {
             $vue = new Template('template/lettres.html');
 
@@ -59,10 +59,10 @@
             $vue = new Template('template/cadeaux.html');
 
 			echo $vue -> getSortie();
-        }
+        }*/
 
 
-        /*public function page2()
+        public function page2()
         {	
 			$lettres = $this -> bdd -> getInfoEnfant();
 			
@@ -154,6 +154,5 @@
     		// On affiche le HTML complet
     		echo $html;
         }
-		*/
     }
 ?>
