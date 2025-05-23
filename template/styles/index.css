@@ -140,7 +140,7 @@
   }
 
   .news{
-    background-image: url("../thumbnails/background.jpg");
+    background-image: url("./template/thumbnails/background.jpg");
     background-color: rgba(32, 32, 32, 0.6);
     background-size: cover;
     background-position: center;
