@@ -21,14 +21,48 @@ function open_contact_section(){
     document.getElementById('bouton-section').style.display = 'none';
   }
 
-  window.onclick = function(event){
+
+function OpenPlanAdder(){
+  document.getElementById('planner-section').style.display = 'block';
+
+}
+
+function ClosePlanAdder(){
+  document.getElementById('planner-section').style.display = 'none';
+
+}
+
+
+function OuvrirDeleteLine(){
+    document.getElementById('delete-line').style.display = 'block'
+  }
+
+  function FermerDeleteLine(){
+    document.getElementById('delete-line').style.display = 'none'
+  }
+
+window.onclick = function(event){
     const contactModal = document.getElementById('bouton-section');
-
-
+    const planAdder = document.getElementById('planner-section')
+    const form_deleteline = document.getElementById('delete-line');
     if (event.target === contactModal) {
       close_contact_section();
     }
+
+    if(event.target === planAdder){
+      ClosePlanAdder();
+    }
+
+    if(event.target == form_deleteline){
+      FermerDeleteLine()
+    }
   }
+
+
+
+
+
+
 </script>
 
 <body>
@@ -71,7 +105,37 @@ function open_contact_section(){
   </div>
   <main style="padding: 30px; color: black;">
     <h1>Suivi des Livraisons</h1>
-    <button>Planifier une livraison</button>
+    <button onclick="OpenPlanAdder()">Planifier une livraison</button>
+              <div id="planner-section" class="formulaire">
+                <div class="formulaire-content">
+                  <span class="formulaire-fermer" onclick="ClosePlanAdder()">&times;</span>
+                  <h2>Planifier une Livraison</h2>
+                  <form>
+                    <label for="date">Date</label>
+                    <input type="date" id="date" name="date" required><br>
+                    <label for="state">État :</label>
+                    <input type="state" id="state" name="state" required><br>
+                    <label for="lutin-attribution">Lutin Concerné :</label>
+                    <select id="lutin-attribution" name="lutin-attribution">
+                      <option value="cadeau1">Lutin1</option>
+                      <option value="cadeau2">Lutin2</option>
+                      <option value="cadeau3">Lutin3</option>
+                      <option value="cadeau4">Lutin4</option>
+                    </select><br>
+                    <label for="cadeaux-a-livrer">Cadeau(x) à Livrer :</label>
+                    <select id="cadeaux-a-livrer" name="cadeaux-a-livrer">
+                      <option value="cadeau1">Ordinateur</option>
+                      <option value="cadeau2">Voiture</option>
+                      <option value="cadeau3">Souris</option>
+                      <option value="cadeau4">Louis</option>
+                    </select><br>
+                    <button class="submit-button-planner-section" type="submit">Valider</button>
+                  </form>
+                </div>
+              </div>
+
+
+
     <table border="1" cellspacing="0" cellpadding="10">
       <thead>
         <tr>
@@ -88,7 +152,19 @@ function open_contact_section(){
           <td>24/12/2025</td>
           <td>en cours</td>
           <td>Turlututu</td>
-          <td><button>Détails</button> <button>Modifier</button> <button>Supprimer</button></td>
+          <td><button>Détails</button> <button>Modifier</button> 
+            <button onclick="OuvrirDeleteLine()">Supprimer</button>
+                <div id="delete-line" class="form-delete-line">
+                  <div class="delete-line-content">
+                    <span class="delete-line-fermer" onclick="FermerDeleteLine()">&times;</span>
+                    <h2>Voulez-vous vraiment supprimer cette ligne ?</h2>
+                    <form>
+                      <button type="submit">Valider</button>
+                      <button type="submit">Annuler</button>
+                    </form>
+                  </div>
+                </div>
+          </td>
         </tr>
       </tbody>
     </table>
