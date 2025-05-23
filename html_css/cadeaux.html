@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestion des Cadeaux</title>
+  <link class="logo" rel="icon" type="image/x-icon" href="thumbnails/logo.png">
+
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="styles/pages.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="back-to-homepage">
+      <a href="acceuil.html">
+        <img class="icon-accueil" src="thumbnails/logo.png">
+        <span class="corp-name">Père Noël Inc.</span>
+      </a>
+    </div>
+    
+    <nav class="menu">
+      <div>
+        <a href="index.html">Accueil</a>
+      </div>
+      <div>
+        <a href="lettres.html">Lettres Reçues</a>
+      </div>
+      <div>
+        <a href="lutins_ateliers.html">Lutins & Ateliers</a>
+      </div>
+      <div>
+        <a href="livraisons.html">Livraisons</a>
+      </div>
+      <div>
+        <a class="menu-cadeaux" href="cadeaux.html">Gestion des Cadeaux</a>
+      </div>
+      <button class="menu-button">Contact</button>
+    </nav>
+  </header>
+  <main style="padding: 30px; color: black;">
+    <h1>Gestion des Cadeaux</h1>
+    <button>Ajouter un cadeau</button>
+    <table border="1" cellspacing="0" cellpadding="10">
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Description</th>
+          <th>Stock</th>
+          <th>Refill</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Voiture magique</td>
+          <td>Petite voiture télécommandée</td>
+          <td>12</td>
+          <td></td>
+          <td><button>Modifier</button> <button>Supprimer</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>
