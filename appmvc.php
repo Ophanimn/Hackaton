@@ -126,7 +126,7 @@
         		$contenu .= '<td>' . htmlspecialchars($livraison->lutins) . '</td>';
     		}
 			
-			$template = file_get_contents('template/livraison.html');
+			$template = file_get_contents('template/livraisons.html');
 
     		// On remplace le placeholder par le contenu HTML généré
    		 	$html = str_replace('{{LIVRAISON}}', $contenu, $template);
