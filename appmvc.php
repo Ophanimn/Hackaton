@@ -10,7 +10,7 @@
 			$this -> bdd = new BDD();
 		}
 
-		public function afficherPage() {
+		public function afficherPage($mapage) {
 			if(!$this -> bdd -> connexion()) {//Connexion à la BDD
 				echo "Une erreur est survenue à la connexion";
 				return;
