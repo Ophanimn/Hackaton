@@ -12,7 +12,7 @@ class BDD {
 	public function connexion() {
 		mysqli_report(MYSQLI_REPORT_OFF);
 		
-		$this -> mysqli = new mysqli('172.16.119.3', 'operateur', 'operateur', 'Quizz');
+		$this -> mysqli = new mysqli('192.168.0.50', 'admin-maxime', 'P@ssw0rd', 'atelier_noel');
 
 		if($this -> mysqli -> connect_errno != 0) {
 			return false;
